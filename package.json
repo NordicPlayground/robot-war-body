@@ -1,0 +1,67 @@
+{
+  "name": "@nordicplayground/robot-war-body",
+  "version": "0.0.0-development",
+  "description": "Robot War Body 3D model developed using JSCAD.",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build --emptyOutDir",
+    "preview": "vite preview",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nordicplayground/robot-war-body.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nordicplayground/robot-war-body/issues"
+  },
+  "homepage": "https://github.com/nordicplayground/robot-war-body#readme",
+  "keywords": [
+    "robot-war",
+    "vite",
+    "JSCAD"
+  ],
+  "author": "Nordic Semiconductor ASA | nordicsemi.no",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@jscad/core": "2.6.3",
+    "@jscad/modeling": "2.10.0",
+    "@jscad/regl-renderer": "2.6.3",
+    "@jscad/stl-serializer": "2.1.12",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.3.0"
+  },
+  "devDependencies": {
+    "@nordicsemiconductor/asset-tracker-cloud-code-style": "11.0.120",
+    "eslint-plugin-no-restricted-imports": "0.0.0",
+    "handlebars": "4.7.7",
+    "vite": "3.0.9"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint --ext .js,.ts,.jsx"
+    ],
+    "*.{md,json,yaml,yml,html}": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
+  },
+  "release": {
+    "branches": [
+      "saga"
+    ],
+    "remoteTags": true,
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github"
+    ]
+  },
+  "prettier": "@nordicsemiconductor/asset-tracker-cloud-code-style/.prettierrc"
+}
